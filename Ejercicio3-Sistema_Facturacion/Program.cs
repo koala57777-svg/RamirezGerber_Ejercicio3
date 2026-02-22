@@ -50,6 +50,7 @@ int reporteFraude = int.Parse(Console.ReadLine());
 Console.WriteLine("");
 double descuento = 0.1;
 double recargo = 0.05;
+Console.WriteLine("");
 
 if (montoBase >= 0 && (tienecupon=="S" || tienecupon=="N") && reporteFraude>=1 && reporteFraude<=3)
 {
