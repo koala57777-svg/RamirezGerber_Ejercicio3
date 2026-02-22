@@ -138,13 +138,13 @@ if (montoBase >= 0 && (tienecupon=="S" || tienecupon=="N") && reporteFraude>=1 &
                     {
                         Console.WriteLine($"Descuento aplicado: {descuento * 100}%");
                         Console.WriteLine($"Recargo:{recargo * 0}%");
-                        Console.WriteLine($"Total final: {(montoBase - (montoBase * descuento)) - (0.1 * (montoBase - (montoBase * descuento)))}");
+                        Console.WriteLine($"Total final: {(montoBase - (montoBase*0.1))}");
                     }
                     else
                     {
-                        Console.WriteLine($"Descuento aplicado: {0.1 * 100}%");
+                        Console.WriteLine($"Descuento aplicado: {0.1 * 0}%");
                         Console.WriteLine($"Recargo:{recargo * 0}%");
-                        Console.WriteLine($"Total final: {montoBase - (montoBase * 0.1)}");
+                        Console.WriteLine($"Total final: {montoBase}");
                     }
                     break;
                 case 2:
@@ -156,15 +156,15 @@ if (montoBase >= 0 && (tienecupon=="S" || tienecupon=="N") && reporteFraude>=1 &
                     }
                     else if (cuponvalido)
                     {
-                        Console.WriteLine($"Descuento aplicado: {descuento * 100}%");
+                        Console.WriteLine($"Descuento aplicado: {descuento * 0}%");
                         Console.WriteLine($"Recargo:{recargo * 0}%");
-                        Console.WriteLine($"Total final: {(montoBase - (montoBase * descuento)) - (0.07 * (montoBase - (montoBase * descuento)))}");
+                        Console.WriteLine($"Total final: {(montoBase - (montoBase*0.1))}");
                     }
                     else
                     {
-                        Console.WriteLine($"Descuento aplicado: {0.07 * 100}%");
+                        Console.WriteLine($"Descuento aplicado: {0.07 * 0}%");
                         Console.WriteLine($"Recargo:{recargo * 0}%");
-                        Console.WriteLine($"Total final: {montoBase - (montoBase * 0.07)}");
+                        Console.WriteLine($"Total final: {montoBase}");
                     }
                     break;
                 case 3:
@@ -206,13 +206,13 @@ if (montoBase >= 0 && (tienecupon=="S" || tienecupon=="N") && reporteFraude>=1 &
                     {
                         Console.WriteLine($"Descuento aplicado: {descuento * 100}%");
                         Console.WriteLine($"Recargo:{recargo * 0}%");
-                        Console.WriteLine($"Total final: {(montoBase - (montoBase * descuento)) - (0.1 * (montoBase - (montoBase * descuento)))}");
+                        Console.WriteLine($"Total final: {(montoBase - (montoBase * 0.1))}");
                     }
                     else
                     {
-                        Console.WriteLine($"Descuento aplicado: {0.1 * 100}%");
+                        Console.WriteLine($"Descuento aplicado: {0.1 * 0}%");
                         Console.WriteLine($"Recargo:{recargo * 0}%");
-                        Console.WriteLine($"Total final: {montoBase - (montoBase * 0.1)}");
+                        Console.WriteLine($"Total final: {montoBase}");
                     }
                     break;
                 case 2:
@@ -224,15 +224,15 @@ if (montoBase >= 0 && (tienecupon=="S" || tienecupon=="N") && reporteFraude>=1 &
                     }
                     else if (cuponvalido)
                     {
-                        Console.WriteLine($"Descuento aplicado: {descuento * 100}%");
+                        Console.WriteLine($"Descuento aplicado: {descuento * 0}%");
                         Console.WriteLine($"Recargo:{recargo * 0}%");
-                        Console.WriteLine($"Total final: {(montoBase - (montoBase * descuento)) - (0.07 * (montoBase - (montoBase * descuento)))}");
+                        Console.WriteLine($"Total final: {(montoBase - (montoBase * 0.1))}");
                     }
                     else
                     {
-                        Console.WriteLine($"Descuento aplicado: {0.07 * 100}%");
+                        Console.WriteLine($"Descuento aplicado: {0.07 * 0}%");
                         Console.WriteLine($"Recargo:{recargo * 0}%");
-                        Console.WriteLine($"Total final: {montoBase - (montoBase * 0.07)}");
+                        Console.WriteLine($"Total final: {montoBase}");
                     }
                     break;
                 case 3:
@@ -274,13 +274,13 @@ if (montoBase >= 0 && (tienecupon=="S" || tienecupon=="N") && reporteFraude>=1 &
                     {
                         Console.WriteLine($"Descuento aplicado: {descuento * 100}%");
                         Console.WriteLine($"Recargo:{recargo * 0}%");
-                        Console.WriteLine($"Total final: {(montoBase - (montoBase * descuento)) - (0.1 * (montoBase - (montoBase * descuento)))}");
+                        Console.WriteLine($"Total final: {(montoBase - (montoBase * 0.1))}");
                     }
                     else
                     {
-                        Console.WriteLine($"Descuento aplicado: {0.1 * 100}%");
+                        Console.WriteLine($"Descuento aplicado: {0.1 * 0}%");
                         Console.WriteLine($"Recargo:{recargo * 0}%");
-                        Console.WriteLine($"Total final: {montoBase - (montoBase * 0.1)}");
+                        Console.WriteLine($"Total final: {montoBase}");
                     }
                     break;
                 case 2:
@@ -292,15 +292,15 @@ if (montoBase >= 0 && (tienecupon=="S" || tienecupon=="N") && reporteFraude>=1 &
                     }
                     else if (cuponvalido)
                     {
-                        Console.WriteLine($"Descuento aplicado: {descuento * 100}%");
+                        Console.WriteLine($"Descuento aplicado: {descuento * 0}%");
                         Console.WriteLine($"Recargo:{recargo * 0}%");
-                        Console.WriteLine($"Total final: {(montoBase - (montoBase * descuento)) - (0.07 * (montoBase - (montoBase * descuento)))}");
+                        Console.WriteLine($"Total final: {(montoBase - (montoBase * 0.1))}");
                     }
                     else
                     {
-                        Console.WriteLine($"Descuento aplicado: {0.07 * 100}%");
+                        Console.WriteLine($"Descuento aplicado: {0.07 * 0}%");
                         Console.WriteLine($"Recargo:{recargo * 0}%");
-                        Console.WriteLine($"Total final: {montoBase - (montoBase * 0.07)}");
+                        Console.WriteLine($"Total final: {montoBase}");
                     }
                     break;
                 case 3:
