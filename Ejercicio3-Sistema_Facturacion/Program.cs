@@ -40,7 +40,7 @@ if (tienecupon == "S")
 }
 
 Console.WriteLine("");
-Console.WriteLine("Ingrese el reporte de intifraude (número): ");
+Console.WriteLine("Ingrese el reporte de antifraude (número): ");
 Console.WriteLine("");
 Console.WriteLine("1. Ninguno");
 Console.WriteLine("2. Cupón inválido repetido");
