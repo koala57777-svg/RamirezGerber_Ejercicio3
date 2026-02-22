@@ -48,8 +48,10 @@ Console.WriteLine("3. Pagos rechazados múltiples");
 Console.WriteLine("");
 int reporteFraude = int.Parse(Console.ReadLine());
 Console.WriteLine("");
+double descuento = 0.1;
+double recargo = 0.05;
 
-if (montoBase >= 0 && (tienecupon=="S" || tienecupon=="N"))
+if (montoBase >= 0 && (tienecupon=="S" || tienecupon=="N") && reporteFraude>=1 && reporteFraude<=3)
 {
     switch (tipoCliente)
     {
@@ -57,68 +59,272 @@ if (montoBase >= 0 && (tienecupon=="S" || tienecupon=="N"))
             switch(metodoPago)
             {
                 case 1:
-                    
+                    if (reporteFraude == 2 || reporteFraude == 3)
+                    {
+                        Console.WriteLine("Descuento aplicado: Ninguno");
+                        Console.WriteLine($"Recargo:{recargo*100}%");
+                        Console.WriteLine($"Total final: {montoBase+(montoBase*recargo)}");
+                    }
+                    else if (cuponvalido)
+                    {
+                        Console.WriteLine($"Descuento aplicado: {descuento*100}%");
+                        Console.WriteLine($"Recargo:{recargo * 0}%");
+                        Console.WriteLine($"Total final: {(montoBase - (montoBase * descuento))-(0.1*(montoBase - (montoBase * descuento)))}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Descuento aplicado: {0.1 * 100}%");
+                        Console.WriteLine($"Recargo:{recargo * 0}%");
+                        Console.WriteLine($"Total final: {montoBase - (montoBase * 0.1)}");
+                    }
                     break;
                 case 2:
-                    
+                    if (reporteFraude == 2 || reporteFraude == 3)
+                    {
+                        Console.WriteLine("Descuento aplicado: Ninguno");
+                        Console.WriteLine($"Recargo:{recargo * 100}%");
+                        Console.WriteLine($"Total final: {montoBase + (montoBase * recargo)}");
+                    }
+                    else if (cuponvalido)
+                    {
+                        Console.WriteLine($"Descuento aplicado: {descuento * 100}%");
+                        Console.WriteLine($"Recargo:{recargo * 0}%");
+                        Console.WriteLine($"Total final: {(montoBase - (montoBase * descuento)) - (0.07 * (montoBase - (montoBase * descuento)))}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Descuento aplicado: {0.07 * 100}%");
+                        Console.WriteLine($"Recargo:{recargo * 0}%");
+                        Console.WriteLine($"Total final: {montoBase - (montoBase * 0.07)}");
+                    }
                     break;
                 case 3:
-                    
+                    if (reporteFraude == 2 || reporteFraude == 3)
+                    {
+                        Console.WriteLine("Descuento aplicado: Ninguno");
+                        Console.WriteLine($"Recargo:{recargo * 100}%");
+                        Console.WriteLine($"Total final: {montoBase + (montoBase * recargo)}");
+                    }
+                    else if (cuponvalido)
+                    {
+                        Console.WriteLine($"Descuento aplicado: {descuento * 100}%");
+                        Console.WriteLine($"Recargo:{recargo * 0}%");
+                        Console.WriteLine($"Total final: {montoBase - (montoBase * descuento)}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Descuento aplicado: {0.07 * 0}%");
+                        Console.WriteLine($"Recargo:{recargo * 0}%");
+                        Console.WriteLine($"Total final: {montoBase}");
+                    }
                     break;
                 default:
                     Console.WriteLine("Método de pago inválido.");
-                    return;
+                    break;
             }
             break;
         case 2:
             switch (metodoPago)
             {
                 case 1:
-                    
+                    if (reporteFraude == 2 || reporteFraude == 3)
+                    {
+                        Console.WriteLine("Descuento aplicado: Ninguno");
+                        Console.WriteLine($"Recargo:{recargo * 100}%");
+                        Console.WriteLine($"Total final: {montoBase + (montoBase * recargo)}");
+                    }
+                    else if (cuponvalido)
+                    {
+                        Console.WriteLine($"Descuento aplicado: {descuento * 100}%");
+                        Console.WriteLine($"Recargo:{recargo * 0}%");
+                        Console.WriteLine($"Total final: {(montoBase - (montoBase * descuento)) - (0.1 * (montoBase - (montoBase * descuento)))}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Descuento aplicado: {0.1 * 100}%");
+                        Console.WriteLine($"Recargo:{recargo * 0}%");
+                        Console.WriteLine($"Total final: {montoBase - (montoBase * 0.1)}");
+                    }
                     break;
                 case 2:
-                    
+                    if (reporteFraude == 2 || reporteFraude == 3)
+                    {
+                        Console.WriteLine("Descuento aplicado: Ninguno");
+                        Console.WriteLine($"Recargo:{recargo * 100}%");
+                        Console.WriteLine($"Total final: {montoBase + (montoBase * recargo)}");
+                    }
+                    else if (cuponvalido)
+                    {
+                        Console.WriteLine($"Descuento aplicado: {descuento * 100}%");
+                        Console.WriteLine($"Recargo:{recargo * 0}%");
+                        Console.WriteLine($"Total final: {(montoBase - (montoBase * descuento)) - (0.07 * (montoBase - (montoBase * descuento)))}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Descuento aplicado: {0.07 * 100}%");
+                        Console.WriteLine($"Recargo:{recargo * 0}%");
+                        Console.WriteLine($"Total final: {montoBase - (montoBase * 0.07)}");
+                    }
                     break;
                 case 3:
-                    
+                    if (reporteFraude == 2 || reporteFraude == 3)
+                    {
+                        Console.WriteLine("Descuento aplicado: Ninguno");
+                        Console.WriteLine($"Recargo:{recargo * 100}%");
+                        Console.WriteLine($"Total final: {montoBase + (montoBase * recargo)}");
+                    }
+                    else if (cuponvalido)
+                    {
+                        Console.WriteLine($"Descuento aplicado: {descuento * 100}%");
+                        Console.WriteLine($"Recargo:{recargo * 0}%");
+                        Console.WriteLine($"Total final: {montoBase - (montoBase * descuento)}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Descuento aplicado: {0.07 * 0}%");
+                        Console.WriteLine($"Recargo:{recargo * 0}%");
+                        Console.WriteLine($"Total final: {montoBase}");
+                    }
                     break;
                 default:
                     Console.WriteLine("Método de pago inválido.");
-                    return;
+                    break;
             }
             break;
         case 3:
             switch (metodoPago)
             {
                 case 1:
-                    
+                    if (reporteFraude == 2 || reporteFraude == 3)
+                    {
+                        Console.WriteLine("Descuento aplicado: Ninguno");
+                        Console.WriteLine($"Recargo:{recargo * 100}%");
+                        Console.WriteLine($"Total final: {montoBase + (montoBase * recargo)}");
+                    }
+                    else if (cuponvalido)
+                    {
+                        Console.WriteLine($"Descuento aplicado: {descuento * 100}%");
+                        Console.WriteLine($"Recargo:{recargo * 0}%");
+                        Console.WriteLine($"Total final: {(montoBase - (montoBase * descuento)) - (0.1 * (montoBase - (montoBase * descuento)))}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Descuento aplicado: {0.1 * 100}%");
+                        Console.WriteLine($"Recargo:{recargo * 0}%");
+                        Console.WriteLine($"Total final: {montoBase - (montoBase * 0.1)}");
+                    }
                     break;
                 case 2:
-                    
+                    if (reporteFraude == 2 || reporteFraude == 3)
+                    {
+                        Console.WriteLine("Descuento aplicado: Ninguno");
+                        Console.WriteLine($"Recargo:{recargo * 100}%");
+                        Console.WriteLine($"Total final: {montoBase + (montoBase * recargo)}");
+                    }
+                    else if (cuponvalido)
+                    {
+                        Console.WriteLine($"Descuento aplicado: {descuento * 100}%");
+                        Console.WriteLine($"Recargo:{recargo * 0}%");
+                        Console.WriteLine($"Total final: {(montoBase - (montoBase * descuento)) - (0.07 * (montoBase - (montoBase * descuento)))}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Descuento aplicado: {0.07 * 100}%");
+                        Console.WriteLine($"Recargo:{recargo * 0}%");
+                        Console.WriteLine($"Total final: {montoBase - (montoBase * 0.07)}");
+                    }
                     break;
                 case 3:
-                    
+                    if (reporteFraude == 2 || reporteFraude == 3)
+                    {
+                        Console.WriteLine("Descuento aplicado: Ninguno");
+                        Console.WriteLine($"Recargo:{recargo * 100}%");
+                        Console.WriteLine($"Total final: {montoBase + (montoBase * recargo)}");
+                    }
+                    else if (cuponvalido)
+                    {
+                        Console.WriteLine($"Descuento aplicado: {descuento * 100}%");
+                        Console.WriteLine($"Recargo:{recargo * 0}%");
+                        Console.WriteLine($"Total final: {montoBase - (montoBase * descuento)}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Descuento aplicado: {0.07 * 0}%");
+                        Console.WriteLine($"Recargo:{recargo * 0}%");
+                        Console.WriteLine($"Total final: {montoBase}");
+                    }
                     break;
                 default:
                     Console.WriteLine("Método de pago inválido.");
-                    return;
+                    break;
             }
             break;
         case 4:
             switch (metodoPago)
             {
                 case 1:
-                    
+                    if (reporteFraude == 2 || reporteFraude == 3)
+                    {
+                        Console.WriteLine("Descuento aplicado: Ninguno");
+                        Console.WriteLine($"Recargo:{recargo * 100}%");
+                        Console.WriteLine($"Total final: {montoBase + (montoBase * recargo)}");
+                    }
+                    else if (cuponvalido)
+                    {
+                        Console.WriteLine($"Descuento aplicado: {descuento * 100}%");
+                        Console.WriteLine($"Recargo:{recargo * 0}%");
+                        Console.WriteLine($"Total final: {(montoBase - (montoBase * descuento)) - (0.1 * (montoBase - (montoBase * descuento)))}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Descuento aplicado: {0.1 * 100}%");
+                        Console.WriteLine($"Recargo:{recargo * 0}%");
+                        Console.WriteLine($"Total final: {montoBase - (montoBase * 0.1)}");
+                    }
                     break;
                 case 2:
-                    
+                    if (reporteFraude == 2 || reporteFraude == 3)
+                    {
+                        Console.WriteLine("Descuento aplicado: Ninguno");
+                        Console.WriteLine($"Recargo:{recargo * 100}%");
+                        Console.WriteLine($"Total final: {montoBase + (montoBase * recargo)}");
+                    }
+                    else if (cuponvalido)
+                    {
+                        Console.WriteLine($"Descuento aplicado: {descuento * 100}%");
+                        Console.WriteLine($"Recargo:{recargo * 0}%");
+                        Console.WriteLine($"Total final: {(montoBase - (montoBase * descuento)) - (0.07 * (montoBase - (montoBase * descuento)))}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Descuento aplicado: {0.07 * 100}%");
+                        Console.WriteLine($"Recargo:{recargo * 0}%");
+                        Console.WriteLine($"Total final: {montoBase - (montoBase * 0.07)}");
+                    }
                     break;
                 case 3:
-                    
+                    if (reporteFraude == 2 || reporteFraude == 3)
+                    {
+                        Console.WriteLine("Descuento aplicado: Ninguno");
+                        Console.WriteLine($"Recargo:{recargo * 100}%");
+                        Console.WriteLine($"Total final: {montoBase + (montoBase * recargo)}");
+                    }
+                    else if (cuponvalido)
+                    {
+                        Console.WriteLine($"Descuento aplicado: {descuento * 100}%");
+                        Console.WriteLine($"Recargo:{recargo * 0}%");
+                        Console.WriteLine($"Total final: {montoBase - (montoBase * descuento)}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Descuento aplicado: {0.07 * 0}%");
+                        Console.WriteLine($"Recargo:{recargo * 0}%");
+                        Console.WriteLine($"Total final: {montoBase}");
+                    }
                     break;
                 default:
                     Console.WriteLine("Método de pago inválido.");
-                    return;
+                    break;
             }
             break;
         default:
